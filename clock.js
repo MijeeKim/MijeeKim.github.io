@@ -20,9 +20,9 @@ function getDates() {
   const days = date.getDate();
   const months = date.getMonth() + 1;
   const years = date.getFullYear();
-  dateTitle.innerText = `${years}년  ${
-    months < 10 ? `0${months}` : months
-  }월 ${days}일`;
+  dateTitle.innerText = `${years}년  ${months < 10 ? `0${months}` : months}월 ${
+    days < 10 ? `0${days}` : days
+  }일`;
 }
 
 function init() {
