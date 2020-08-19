@@ -1,0 +1,6 @@
+@font-face {
+	font-family: NanumMyeongjo;
+	src: local('NanumMyeongjo'),
+	     url(/font/NanumMyeongjo.woff2) format('woff2'),
+	     url(/font/NanumMyeongjo.woff) format('woff'),
+	     url(/font/NanumMyeongjo.ttf) format('truetype');

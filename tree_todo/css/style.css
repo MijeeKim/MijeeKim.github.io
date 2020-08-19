@@ -1,0 +1,97 @@
+html * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  margin-top: 80px;
+}
+
+.header__clock {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+main {
+  margin-top: 30px;
+  display: flex;
+}
+
+.main__window {
+  width: 300px;
+  min-height: 250px;
+  background-image: url("../tree.png");
+  background-size: cover;
+  background-position: left bottom;
+}
+
+.main__todo {
+  width: 300px;
+}
+
+form {
+  display: flex;
+  border: 1px solid lightgray;
+}
+
+form input {
+  border: none;
+  outline: none;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+}
+
+.resetBtn {
+  border: none;
+  outline: none;
+  background: none;
+  opacity: 0;
+  width: 20px;
+}
+
+.todo__lists {
+  border: 1px solid olivedrab;
+  height: 240px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.todo__lists::after {
+  background-color: olivedrab;
+  display: block;
+  padding: 0 5px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  color: palegoldenrod;
+}
+
+.todo__lists.pending::after {
+  content: "pending";
+}
+
+.todo__lists.finished::after {
+  content: "finished";
+}
+
+.todo__list {
+  padding: 0 10px;
+}

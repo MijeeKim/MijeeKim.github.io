@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <meta charset="UTF-8" />
+    <style>
+      html * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: sans-serif;
+        margin: 10px;
+      }
+
+      button {
+        background: none;
+        outline: none;
+        border: none;
+        padding: 10px 0;
+        margin: 5px;
+        width: 78px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 5px rgba(177, 177, 177, 1);
+        color: white;
+        font-size: 16px;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+      button:active {
+        box-shadow: 5px 5px 5px rgba(177, 177, 177, 0.8) inset;
+      }
+
+      .calcFrame {
+        border-radius: 20px;
+        margin: 0 auto;
+        padding: 20px 10px;
+        width: fit-content;
+        display: flex;
+        box-shadow: 5px 5px 10px 5px rgba(177, 177, 177, 0.5);
+      }
+
+      .numArea {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .resultSpace {
+        background-color: skyblue;
+        border-radius: 20px;
+        margin: 4px;
+        width: 260px;
+        height: 37px;
+        color: white;
+      }
+
+      .resultSpace p {
+        text-align: right;
+        margin-top: 5px;
+        padding-right: 12px;
+        font-size: 18px;
+      }
+
+      .keyPad {
+        margin-top: 1px;
+        width: fit-content;
+      }
+
+      .keyPad .line {
+        font-size: 0;
+      }
+
+      .keyPad button {
+        background-color: lightgray;
+      }
+
+      .keyPad button[name="0"] {
+        width: 167px;
+      }
+
+      .funcArea {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .funcArea button {
+        background-color: orange;
+      }
+
+      .funcArea button:active {
+        box-shadow: 5px 5px 5px rgba(219, 131, 49, 0.8) inset;
+      }
+
+      .funcArea .reset {
+        background-color: gray;
+      }
+
+      .funcArea .reset:active {
+        box-shadow: 5px 5px 5px rgba(77, 77, 77, 0.8) inset;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="calcFrame">
+      <div class="numArea">
+        <div class="resultSpace">
+          <p class="result"></p>
+        </div>
+
+        <div class="keyPad">
+          <div class="line">
+            <button class="num" name="7">7</button>
+            <button class="num" name="8">8</button>
+            <button class="num" name="9">9</button>
+          </div>
+
+          <div class="line">
+            <button class="num" name="4">4</button>
+            <button class="num" name="5">5</button>
+            <button class="num" name="6">6</button>
+          </div>
+
+          <div class="line">
+            <button class="num" name="1">1</button>
+            <button class="num" name="2">2</button>
+            <button class="num" name="3">3</button>
+          </div>
+
+          <div class="line">
+            <button class="num" name="0">0</button>
+            <button class="func equals" name="=">=</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="funcArea">
+        <button class="reset" type="reset">C</button>
+        <button class="func" name="+">&#43;</button>
+        <button class="func" name="-">&#45;</button>
+        <button class="func" name="*">x</button>
+        <button class="func" name="/">&#47;</button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        let calculator = {
+          displayValue: "0",
+          firstOperand: null,
+          waitingForSecondOperand: false,
+          funcKey: null,
+        };
+
+        const calcFrame = document.querySelector(".calcFrame");
+        const display = document.querySelector(".result");
+
+        function showDisplay() {
+          display.textContent = calculator.displayValue;
+        }
+
+        calcFrame.addEventListener("click", function (e) {
+          if (e.target.tagName === "BUTTON") {
+            if (e.target.classList.contains("func")) {
+              handleFuncKey(e.target.name);
+              showDisplay();
+              return;
+            }
+            if (e.target.classList.contains("reset")) {
+              resetCalculator();
+              showDisplay();
+              return;
+            }
+            if (e.target.classList.contains("num")) {
+              inputNum(e.target.name);
+              showDisplay();
+              return;
+            }
+          }
+        });
+
+        function inputNum(num) {
+          if (calculator.waitingForSecondOperand === true) {
+            calculator.displayValue = num;
+            calculator.waitingForSecondOperand = false;
+          } else {
+            if (calculator.displayValue === "0") {
+              calculator.displayValue = num;
+            } else {
+              calculator.displayValue = calculator.displayValue + num;
+            }
+          }
+        }
+
+        const performCalculation = {
+          "/": (firstOperand, secondOperand) => firstOperand / secondOperand,
+          "*": (firstOperand, secondOperand) => firstOperand * secondOperand,
+          "+": (firstOperand, secondOperand) => firstOperand + secondOperand,
+          "-": (firstOperand, secondOperand) => firstOperand - secondOperand,
+          "=": (firstOperand, secondOperand) => secondOperand,
+        };
+
+        function handleFuncKey(text) {
+          const inputValue = calculator.displayValue;
+
+          if (calculator.funcKey && calculator.waitingForSecondOperand) {
+            calculator.funcKey = text;
+            return;
+          }
+          if (calculator.firstOperand == null) {
+            calculator.firstOperand = inputValue;
+          } else if (calculator.funcKey) {
+            const currentValue = calculator.firstOperand || 0;
+            const result = performCalculation[calculator.funcKey](
+              currentValue,
+              inputValue
+            );
+            calculator.displayValue = result;
+            calculator.firstOperand = result;
+          }
+          calculator.waitingForSecondOperand = true;
+          calculator.funcKey = text;
+        }
+
+        function resetCalculator() {
+          calculator.displayValue = "0";
+          calculator.firstOperand = null;
+          calculator.waitingForSecondOperand = false;
+          calculator.funcKey = null;
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>오설록, 차와 제주가 선사하는 삶의 아름다움 | 오설록</title>
+    <!--favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- bx slider 시작-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- bx xlider 끝 -->
+
+    <link rel="stylesheet" media="all" href="css/common.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap");
+      @font-face {
+        font-family: "Arita-buri-SemiBold";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+    <script>
+      // header bx slider
+      $(document).ready(function () {
+        $(".img_list").bxSlider({
+          pagerCustom: ".main_swiper",
+          auto: true,
+          speed: "5000",
+          autoControls: true,
+          autoControlsCombine: true,
+          mode: "fade"
+        });
+      });
+      // video bx slider
+      $(document).ready(function () {
+        $(".category_slider").bxSlider({
+          pagerCustom: ".category",
+          auto: true,
+          speed: "800",
+          easing: "swing",
+          pause: "20000",
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- 헤더 부분 -->
+      <header>
+        <div class="inner">
+          <h1>
+            <a href=""><img src="images/h1_logo.png" alt="" /></a>
+          </h1>
+
+          <ul class="gnb_myset clear">
+            <li>
+              <a href="">로그인</a>
+            </li>
+            <li>
+              <a href="">회원가입</a>
+            </li>
+            <li>
+              <a href="#">한국어</a>
+              <!-- drop menu -->
+              <ul class="lang" style="display: none;">
+                <li>
+                  <a href="">한국어</a>
+                </li>
+                <li>
+                  <a href="">English</a>
+                </li>
+                <li>
+                  <a href="">中文</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 언어 설정 드롭메뉴 스크립트 -->
+        <script>
+          (function(){
+              const btnMyset = document.querySelector(
+              "header > .inner > .gnb_myset > li:last-child > a"
+            );
+            const targetLang = document.querySelector(
+              "header > .inner > .gnb_myset > li > .lang"
+            );
+
+            btnMyset.addEventListener("click", function () {
+              if (targetLang.style.display === "block") {
+                targetLang.style.display = "none";
+              } else {
+                targetLang.style.display = "block";
+              }
+            });
+          })();
+        </script>
+
+
+        <div class="gnb">
+          <div class="inner">
+            <ul class="gnb_menu clear">
+              <li class="list1">
+                <a href="">Shop</a>
+              </li>
+              <li class="list2">
+                <a href="">Tea Life</a>
+              </li>
+              <li class="list3">
+                <a href="">Event</a>
+              </li>
+              <li class="list4">
+                <a href="">About OSULLOC</a>
+              </li>
+              <li class="list5">
+                <a href="">Jeju Tea Museum</a>
+              </li>
+              
+              <!-- drop menu -->
+              <article>
+                  <div class="today_promotion">
+                      <div class="promotion_text">
+                        <h4>오늘만 이 가격</h4>
+                        <p>30% 할인된 가격에 구매할 기회!</p>
+                        <p>놓치지 마세요~</p>
+                      </div>
+                      <div class="promotion_image">
+                        <img
+                          src="images/img_todayprice.png"
+                          class="today"
+                          alt="오늘의 할인 제품"
+                        />
+                      </div>
+                  </div>
+                  <div class="inner clear">
+                    <ul class="shop_list list1">
+                        <li>
+                          <a href="">Tea Shop</a>
+                        </li>
+                        <li>
+                          <a href="">Tea ware Shop</a>
+                        </li>
+                        <li>
+                          <a href="">Gift Shop</a>
+                        </li>
+                        <li>
+                          <a href="">Weekly Best</a>
+                        </li>
+                        <li>
+                          <a href="">뭉치면 할인 UP</a>
+                        </li>
+                        <li>
+                          <a href="">오설록 라운지</a>
+                        </li>
+                    </ul>
+                    <ul class="shop_list list2">
+                        <li>
+                          <a href="">상품 구매후기</a>
+                        </li>
+                        <li>
+                          <a href="">선물하기</a>
+                        </li>
+                        <li>
+                          <a href="">다다일상(정기구독)</a>
+                        </li>
+                        <li>
+                          <a href="">맞춤추천</a>
+                        </li>
+                        <li>
+                          <a href="">MD's PICK</a>
+                        </li>
+                        <li>
+                          <a href="">매장 방문기</a>
+                        </li>
+                    </ul>
+                    <ul class="shop_list list3">
+                        <li>
+                          <a href="">이벤트</a>
+                        </li>
+                        <li>
+                          <a href="">온라인 쇼핑혜택</a>
+                        </li>
+                        <li>
+                          <a href="">인스타그램</a>
+                        </li>
+                        <li>
+                          <a href="">About Tea</a>
+                        </li>
+                    </ul>
+                    <ul class="shop_list list4">
+                        <li>
+                          <a href="">Brand Story</a>
+                        </li>
+                        <li>
+                          <a href="">Since 1979</a>
+                        </li>
+                        <li>
+                          <a href="">오설록 차밭 이야기</a>
+                        </li>
+                        <li>
+                          <a href="">숫자로 보는 오설록</a>
+                        </li>
+                        <li>
+                          <a href="">티하우스 메뉴</a>
+                        </li>
+                        <li>
+                          <a href="">매거진</a>
+                        </li>
+                    </ul>
+                    <ul class="shop_list list5">
+                        <li>
+                          <a href="">티뮤지엄 소개</a>
+                        </li>
+                        <li>
+                          <a href="">티스톤 예약</a>
+                        </li>
+                        <li>
+                          <a href="">제주 오설록 맵</a>
+                        </li>
+                    </ul>
+                  </div>
+              </article>
+              <div class="searchBox">
+                <form action="">
+                  <input type="text" placeholder="제품명을 입력해주세요." />
+                  <button type="button">
+                    <img src="images/ico_search_fixed_off.png" />
+                  </button>
+                </form>
+                <div>
+                  <p>최근검색 <span>전체 삭제</span></p>
+                  <em>최근검색어가 없습니다.</em>
+                </div>
+                <div>
+                  <p>자주쓰는검색</p>
+                  <em>자주쓰는검색어가 없습니다.</em>
+                </div>
+                <div>
+                  <p>인기검색</p>
+                  <em>세작</em>
+                  <em>녹차</em>
+                  <em>케이크</em>
+                  <em>아이스티</em>
+                  <em>달빛걷기</em>
+                  <br>
+                  <em>스프레드</em>
+                  <em>밀크티</em>
+                  <em>잎차</em>
+                  <em>달빛</em>
+                  <em>웨하스</em>
+                </div>
+              </div>
+            </ul>
+
+            <ul class="gnb_more">
+              <li><a href="" class="search"></a></li>
+              <li><a href="" class="cart"></a></li>
+              <li>
+                <a href="#" class="more"></a>
+                <!-- drop menu -->
+                <ul class="more_menu">
+                  <li><a href="#">고객센터</a></li>
+                  <li><a href="#"">매장찾기</a></li>
+                  <li>주문배송 조회</li>
+                  <li>뷰티포인트 추후적립</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!--gnb 메인 드롭메뉴 스크립트-->
+        <script>
+          (function(){
+            const btnMains =document.querySelector("header .gnb .gnb_menu"),
+              targetMain = document.querySelector("header .gnb .gnb_menu article"),
+              shopList = targetMain.querySelectorAll("ul.shop_list"),
+              hoverList = document.querySelectorAll('li[class^=list]');
+
+            btnMains.addEventListener('mouseenter', function(e){
+              if(targetMain.style.display === "none"){
+                targetMain.style.display = 'block'
+              } else {
+
+                targetMain.addEventListener('mouseenter', function(){
+                  this.style.display = 'block'
+                })
+                targetMain.addEventListener('mouseleave', function(){
+                  this.style.display = 'none'
+                })
+              }
+            })
+            btnMains.addEventListener('mouseleave', function(){
+              targetMain.style.display = 'none'
+            })
+
+          // gnb 메인 드롭메뉴: 호버 시, 폰트 효과
+         
+            for(let i = 0; i < hoverList.length; i++){
+              hoverList[i].addEventListener('mouseenter', function(e){
+                shopList.forEach(list=> list.style = "color: inherit")
+                if(shopList[i].classList.contains(e.target.className)){
+                  shopList[i].style = "color: #232323"
+                } else {
+                  shopList[i].style = "color: inherit"
+                }
+                  
+              })
+            }
+          })();
+         
+        </script>
+
+
+        <!--gnb 서브 드롭메뉴 스크립트-->
+        <script>
+          (function(){
+            const btnSub = document.querySelector("header .gnb .gnb_more > li:last-child"),
+              btnSearch = document.querySelector("header .gnb .gnb_more > li:first-child"),
+              targetSub = document.querySelector(".gnb_more .more_menu"),
+              targetSearch = document.querySelector(".searchBox");
+
+            btnSub.addEventListener('mouseenter', function(e){
+                if(targetSub.style.display === "none"){
+                  targetSub.style.display = 'block'
+                } else {
+      
+                  targetSub.addEventListener('mouseenter', function(){
+                    this.style.display = 'block'
+                  })
+                  targetSub.addEventListener('mouseleave', function(){
+                    this.style.display = 'none'
+                  })
+                }
+              })
+            btnSub.addEventListener('mouseleave', function(e){
+              if(e.relatedTarget.tagName !== 'UL'){
+                targetSub.style.display = 'none'
+              } else {
+                targetSub.style.display = 'block'
+              }
+            })
+
+            btnSearch.addEventListener("click", function(e){
+              if(e.target.tagName !== 'A') return;
+              e.preventDefault();
+
+              if(targetSearch.style.display === "none"){
+                targetSearch.style.display = "block";
+                e.target.classList.add("close")
+              } else {
+                targetSearch.style.display = "none";
+                e.target.classList.remove("close")
+              }
+              
+            })
+            })();
+
+        </script>
+
+
+
+
+        <!-- header bx slider 부분 -->
+        <div class="main_img">
+          <ul class="main_swiper">
+            <li>
+              <a data-slide-index="0" href="">
+                아이스티 기획전
+              </a>
+              <b></b>
+              <i></i>
+            </li>
+            <li>
+              <a data-slide-index="1" href="">무카페인 허브티</a>
+              <b></b>
+              <i></i>
+            </li>
+            <li>
+              <a data-slide-index="2" href="">차 정기구독</a>
+              <b></b>
+              <i></i>
+            </li>
+            <li>
+              <a data-slide-index="3" href="">티 아이스크림</a>  
+              <b></b>
+              <i></i>
+            </li>
+            <li>
+              <a data-slide-index="4" href="">8월 출석체크</a>
+              <b></b>
+              <i></i>
+            </li>
+          </ul>
+
+          <ul class="img_list">
+            <li>
+              <a href="">
+                <img src="images/bg_header1.jpg" alt="" />
+              </a>
+              <div class="main_text">
+                <strong>
+                  아이스티야, 여름을 부탁해
+                </strong>
+                <span>아이스티 8종 최대 30% 할인</span>
+                <img src="images/bar.png" alt="" />
+                <em>2020년 8월 5일 ~ 2020년 8월 19일</em>
+              </div>
+            </li>
+            <li>
+              <a href="">
+                <img src="images/bg_header2.jpg" alt="" />
+              </a>
+              <div class="main_text" style="color: white">
+                <strong style="color: white">
+                  잘 자요, 여름날의 밤
+                </strong>
+                <span>잠 못 이루는 밤을 다독이는 무카페인 허브티 한 잔</span>
+                <img src="images/bar.png" alt="" />
+                <em style="color: white">2020년 7월 28일 ~ 2020년 8월 11일</em>
+              </div>
+            </li>
+            <li>
+              <a href="">
+                <img src="images/bg_header3.jpg" alt="" />
+              </a>
+              <div class="main_text">
+                <strong>
+                  8월의 다다일상
+                </strong>
+                <span>무더운 여름, 아이스티로 수분보충하세요!</span>
+                <img src="images/bar.png" alt="" />
+                <em>2020년 8월 1일 ~ 2020년 8월 25일</em>
+              </div>
+            </li>
+            <li>
+              <a href="">
+                <img src="images/bg_header4.jpg" alt="" />
+              </a>
+              <div class="main_text">
+                <strong>
+                  오설록 티 아이스크림 오픈
+                </strong>
+                <span>제주에서 줄서서 먹던 티 아이스크림,
+                  <br>
+                  워터플러스 3입샘플도 함께 즐겨보세요!
+                </span>
+                <img src="images/bar.png" alt="" />
+                <em>2020년 7월 24일 ~ 2020년 8월 31일</em>
+              </div>
+            </li>
+            <li>
+              <a href="">
+                <img src="images/bg_header5.jpg" alt="" />
+              </a>
+              <div class="main_text">
+                <strong>
+                 VON VACANCE! 8월 출석체크
+                </strong>
+                <span>무더운 8월, 출석체크하고 냉침하기 좋은 섬 시리즈도 만나보아요</span>
+                <img src="images/bar.png" alt="" />
+                <em>2020년 8월 1일 ~ 2020년 8월 31일</em>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+
+
+
+      <!-- 메인 부분 -->
+      <main>
+        <!-- 1. 위클리 베스트 -->
+        <section class="weekly_best">
+          <h3>
+            Weekly Best
+          </h3>
+          <ul class="rank clear">
+            <li><a href="" class="rank_review">리뷰순</a></li>
+            <li><a href="" class="rank_selling">판매순</a></li>
+          </ul>
+
+          <!-- 리뷰순 리스트 -->
+          <ol class="review clear">
+            <li>
+              <strong class="no1">1</strong>
+              <a href="" class="prod_img">
+                <img src="images/img_weekly11.png" alt="" />
+              </a>
+              <b class="prod_layer clear">
+                <a href="">리뷰보기</a>
+                <a href="">장바구니</a>
+              </b>
+              <span></span>
+              <a href="" class="prod_name">제주 녹차 크레이프 케이크</a>
+              <a href="" class="review_com"
+                ><p>생일선물로 구매했는데 만족합니다..</p></a
+              >
+              <em>2020.07.09</em>
+              <i>010********</i>
+            </li>
+            <li>
+              <strong>2</strong>
+              <a href="" class="prod_img">
+                <img src="images/img_weekly12.png" alt="" />
+              </a>
+              <b class="prod_layer clear">
+                <a href="">리뷰보기</a>
+                <a href="">장바구니</a>
+              </b>
+              <span></span>
+              <a href="" class="prod_name">그린티라떼더블샷 10입</a>
+              <a href="" class="review_com"
+                ><p>후기 보고 평이 좋길래 선물용으로 구매했어요.</p></a
+              >
+              <em>2020.07.12</em>
+              <i>lbm*****</i>
+            </li>
+            <li>
+              <strong>3</strong>
+              <a href="" class="prod_img">
+                <img src="images/img_weekly13.png" alt="" />
+              </a>
+              <b class="prod_layer clear">
+                <a href="">리뷰보기</a>
+                <a href="">장바구니</a>
+              </b>
+              <span></span>
+              <a href="" class="prod_name">그린티웨하스 100g</a>
+              <a href="" class="review_com"
+                ><p>식감도 맛도 고급스러워요 근데 가격이 너무 비싸네요</p></a
+              >
+              <em>2020.07.16</em>
+              <i>rur*****</i>
+            </li>
+            <li>
+              <strong>4</strong>
+              <a href="" class="prod_img">
+                <img src="images/img_weekly14.png" alt="" />
+              </a>
+              <b class="prod_layer clear">
+                <a href="">리뷰보기</a>
+                <a href="">장바구니</a>
+              </b>
+              <span></span>
+              <a href="" class="prod_name">그린티 랑드샤 10입</a>
+              <a href="" class="review_com"
+                ><p>
+                  달지않고 맛있는데 가격이 좀 비싼듯해요 ㅜ 그래도 고급스러워서
+                  선물...
+                </p></a
+              >
+              <em>2020.07.15</em>
+              <i>hoh*****</i>
+            </li>
+            <li>
+              <strong>5</strong>
+              <a href="" class="prod_img">
+                <img src="images/img_weekly15.png" alt="" />
+              </a>
+              <b class="prod_layer clear">
+                <a href="">리뷰보기</a>
+                <a href="">장바구니</a>
+              </b>
+              <span></span>
+              <a href="" class="prod_name">레드파파야블랙티 20입</a>
+              <a href="" class="review_com"
+                ><p>
+                  선물 받고 너무 좋아서 제돈주고 구입해서 마셔요~ 차에서 풍기는
+                  향기가...
+                </p></a
+              >
+              <em>2020.07.15</em>
+              <i>hoh*****</i>
+            </li>
+          </ol>
+
+          <!-- 판매순 리스트 -->
+          <ol class="selling clear">
+            <li>
+              <strong class="no1">1</strong>
+              <a href="" class="prod_img">
+                <img src="images/img_weekly21.png" alt="" />
+              </a>
+              <b class="prod_layer clear">
+                <a href="">리뷰보기</a>
+                <a href="">장바구니</a>
+              </b>
+              <a href="" class="prod_name">그린티웨하스 100g</a>
+              <span>5,000 원</span>
+            </li>
+            <li>
+              <strong>2</strong>
+              <a href="" class="prod_img">
+                <img src="images/img_weekly22.png" alt="" />
+              </a>
+              <b class="prod_layer clear">
+                <a href="">리뷰보기</a>
+                <a href="">장바구니</a>
+              </b>
+              <a href="" class="prod_name">그린티 랑드샤 10입</a>
+              <span>12,000 원</span>
+            </li>
+            <li>
+              <strong>3</strong>
+              <a href="" class="prod_img">
+                <img src="images/img_weekly23.png" alt="" />
+              </a>
+              <b class="prod_layer clear">
+                <a href="">리뷰보기</a>
+                <a href="">장바구니</a>
+              </b>
+              <a href="" class="prod_name">제주섬녹차초콜릿바 3입</a>
+              <span>8,500 원</span>
+            </li>
+            <li>
+              <strong>4</strong>
+              <a href="" class="prod_img">
+                <img src="images/img_weekly24.png" alt="" />
+              </a>
+              <b class="prod_layer clear">
+                <a href="">리뷰보기</a>
+                <a href="">장바구니</a>
+              </b>
+              <a href="" class="prod_name">달빛걷기 20입(피라미드)</a>
+              <span>23,000 원</span>
+            </li>
+            <li>
+              <strong>5</strong>
+              <a href="" class="prod_img">
+                <img src="images/img_weekly25.png" alt="" />
+              </a>
+              <b class="prod_layer clear">
+                <a href="">리뷰보기</a>
+                <a href="">장바구니</a>
+              </b>
+              <a href="" class="prod_name">프리미엄 티컬렉션</a>
+              <span>25,000 원</span>
+            </li>
+          </ol>
+        </section>
+
+
+        <!--이미지 호버 메뉴 스크립트(공통)-->
+
+        <!--리뷰순 / 판매순 전환 스크립트-->
+        <script>
+          (function(){
+            const btnWeekly = document.querySelector("main .weekly_best .rank"),
+              weeklyReview = document.querySelector("main .weekly_best ol.review"),
+              weeklySelling = document.querySelector("main .weekly_best ol.selling");
+
+            btnWeekly.addEventListener("click", function(e){
+              if(e.target.tagName !== 'A') return;
+              
+                e.preventDefault();
+
+                for(let i = 0; i < this.children.length; i++){
+                  this.children[i].children[0].style = "color: inherit; font-weight: 400;"
+                }
+                
+                const rank_review = e.target.classList.contains('rank_review');
+                const rank_selling = e.target.classList.contains('rank_selling');
+
+                if(rank_review){
+                  e.target.style = "color: #6c801a; font-weight: 500;"
+                  weeklyReview.style.display = "block";
+                  weeklySelling.style.display = "none"
+
+                } else {
+                  e.target.style = "color: #6c801a; font-weight: 500;"
+                  weeklyReview.style.display = "none";
+                  weeklySelling.style.display = "block"
+                }
+            })
+          })()
+        </script>
+
+
+
+        <!-- 2. 엠디 픽 -->
+        <section class="md_pick">
+          <div class="inner clear">
+            <div class="cover">
+              <h3>MD's PICK</h3>
+              <em>칼칼한 목에 필요한 수분 충전</em>
+              <strong>건조한 8월 촉촉하게 나기</strong>
+              <p>
+                가을이 다가올 때면 가슴 속에 설렘이 몽글몽글 피어나요. <br />
+                그런데 이맘때 찾아오는 불청객도 있죠. ...
+              </p>
+              <a href="" class="more">MD's PICK 더 보기</a>
+            </div>
+
+            <ul class="pick_list clear">
+              <li>
+                <a href="" class="prod_img1"
+                  ><img src="images/img_mdpick1.png" alt=""
+                /></a>
+                <a href="" class="prod_name">세작 10입(피라미드)</a>
+                <span>20,000원</span>
+              </li>
+              <li>
+                <a href="" class="prod_img2"
+                  ><img src="images/img_mdpick2.png" alt=""
+                /></a>
+                <a href="" class="prod_name">동백이 피는 곶자왈 10입</a>
+                <span>15,000원</span>
+              </li>
+              <li>
+                <a href="" class="prod_img3"
+                  ><img src="images/img_mdpick3.png" alt=""
+                /></a>
+                <a href="" class="prod_name">아이스 달빛 보틀</a>
+                <span>4,500원</span>
+              </li>
+              <li>
+                <a href="" class="prod_img4"
+                  ><img src="images/img_mdpick4.png" alt=""
+                /></a>
+                <a href="" class="prod_name">스테인레스 더블월 컵</a>
+                <span>18,000원</span>
+              </li>
+            </ul>
+
+            <a href="" class="pick_main scale"
+              ><img src="images/img_mdpick.png" alt=""
+            /></a>
+          </div>
+        </section>
+
+        <!-- 3. 티웨어 샵 -->
+        <section class="teaware_shop clear">
+          <div class="cover">
+            <h3>Tea ware Shop</h3>
+            <p>
+              다채로운 오설록의 차를 즐길 수 있는 <br />
+              다양한 Tea ware를 만나보세요.
+            </p>
+            <a href="" class="more">전체보기</a>
+          </div>
+
+          <div class="left">
+            <a href="" class="scale"
+              ><img src="images/img_teawareshop4.jpg" alt=""
+            /></a>
+            <a href="" class="scale"
+              ><img src="images/img_teawareshop5.jpg" alt=""
+            /></a>
+          </div>
+
+          <div class="right">
+            <a href="" class="scale"
+              ><img src="images/img_teawareshop1.jpg" alt=""
+            /></a>
+          </div>  
+
+  
+          
+          <!-- 페이지 넘기는 슬라이더 -->
+          <div class="page clear">
+            <div class="page_btn">
+              <a href="" class="prev"></a>
+              <a href="" class="next"></a>
+            </div>
+            <div class="page_slider">
+              <div class="page_bar"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 슬라이더 작동 스크립트 -->
+        <script>
+         (function(){
+          const btnSlider = document.querySelector("main .page_btn"),
+                sliderBar = document.querySelector("main .page_bar");
+
+          const teawareLeft = document.querySelector("main .teaware_shop .left"),
+               teawareRight = document.querySelector("main .teaware_shop .right");
+
+          btnSlider.addEventListener("click", function(e){
+            if(e.target.tagName === 'A') {
+              e.preventDefault();
+              const prev = e.target.parentNode.children[0], 
+                    next = e.target.parentNode.children[1];
+              
+              if(e.target.classList.contains('next')){
+                prev.style = "border-left-color: #131313; border-bottom-color: #131313;"
+                next.style = "border-top-color: lightgray; border-right-color: lightgray;"
+                sliderBar.style = "width: 100%; transition: width 0.3s ease-in-out"
+
+                teawareLeft.children[0].children[0].src = "images/img_teawareshop3.jpg"
+                teawareLeft.children[1].children[0].src = "images/img_teawareshop4.jpg"
+                teawareRight.children[0].children[0].src = "images/img_teawareshop2.jpg"
+              } else {
+                prev.style = "border-left-color: lightgray; border-bottom-color: lightgray;"
+                next.style = "border-top-color: #131313; border-right-color: #131313;"
+                sliderBar.style = "width: 50%; transition: width 0.3s ease-in-out"
+
+                teawareLeft.children[0].children[0].src = "images/img_teawareshop4.jpg"
+                teawareLeft.children[1].children[0].src = "images/img_teawareshop5.jpg"
+                teawareRight.children[0].children[0].src = "images/img_teawareshop1.jpg"
+              }
+            }
+          })
+         })();
+        </script>
+
+
+
+        <!-- 4. 오늘의 할인 -->
+        <section class="today_price">
+          <h3>오늘만 이 가격</h3>
+          <p>
+            오늘 하루만 이 가격으로 구매할 수 있는 상품을 지금 바로 만나보세요.
+          </p>
+          <div class="today_bg">
+            <div class="today_box">
+              <div class="time">
+                00:00:00
+              </div>
+              <strong>햇살언덕 10입(피라미드)</strong>
+
+              <img
+                src="images/img_todayprice.png"
+                class="today"
+                alt="오늘의 할인 제품"
+              />
+
+              <div class="price">
+                <span>30% 할인</span>
+                <del>15,000원</del>
+                <em>10,500원</em>
+                <a href="">바로구매</a>
+              </div>
+            </div>
+
+            <div class="tomorrow_box">
+              <p>내일은 이 제품이 올라와요</p>
+              <img
+                src="images/img_todayprice2.png"
+                class="tomorrow"
+                alt="내일의 할인 제품"
+              />
+            </div>
+            <div class="dim"></div>
+          </div>
+
+
+          <!--카운트다운 부분 스크립트-->
+          <script>
+              const clock = document.querySelector(".time");
+                init()
+                function init(){
+                    setInterval(getTime, 1000)
+                }
+              function getTime(){
+                const midnightH = 24;
+                const midnightMS = 60;
+                  const time = new Date();
+                  let hours = Math.floor(midnightH - time.getHours());
+                  let mins = Math.floor(midnightMS - time.getMinutes());
+                  let seconds = Math.floor(midnightMS - time.getSeconds());
+                  if(mins === 60){
+                   mins = 0;
+                  }
+                  if(seconds === 60){
+                    seconds = 0;
+                  }
+                  clock.textContent = `${hours < 10 ? `0${hours}`:hours}:${mins < 10 ? `0${mins}`:mins}:${seconds < 10 ? `0${seconds}`:seconds}`
+              }
+          </script>
+
+          <!-- 매거진 부분 -->
+          <div class="magazine">
+            <div class="magazine_left">
+              <a href=""><img src="images/img_magazine1.jpg" alt="" /></a>
+              <div class="bright"></div>
+            </div>
+            <div class="magazine_right">
+              <a href=""><img src="images/img_magazine2.jpg" alt="" /></a>
+              <div class="bright"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. 티매니아 부분  -->
+        <section class="tea_mania clear">
+          <div class="cover">
+            <h3>티 매니아</h3>
+            <p>
+              오설록 티매니아들의 <br />
+              정성스런 리뷰를 만나보세요.
+            </p>
+
+            <a href="" class="more">전체보기</a>
+          </div>
+
+          <div class="mania_main">
+            <a href="" class="mania_img scale"
+              ><img src="images/img_maniamain.jpg" alt=""
+            /></a>
+            <em>입 안 가득 퍼지는</em>
+            <a href="" class="title">
+              <strong>쌉쌀한 달콤함 #그린티웨하스</strong></a
+            >
+            <a href="" class="desc"
+              >바삭한 식감과 진한 녹차 크림이 조화를 이루는 #녹차디저트 #오설록
+              #그린티웨하스 입 안 가득 퍼지는 쌉쌀한 달콤함을 커피 한 잔과 함께
+              즐겨보세요</a
+            >
+
+            <div class="mania">
+              <img src="images/img_mania1.jpg" alt="" />
+              <i>by 엘레양</i>
+              <em>2020년7월30일</em>
+            </div>
+          </div>
+
+          <ul class="mania_list clear">
+            <li>
+              <a href=""><img src="images/img_maniamain1.jpg" alt="" /></a>
+              <div class="bright"></div>
+              <div class="mania">
+                <img src="images/img_mania2.jpg" alt="" />
+                <i>소연</i>
+              </div>
+            </li>
+            <li>
+              <a href=""><img src="images/img_maniamain2.jpg" alt="" /></a>
+              <div class="bright"></div>
+              <div class="mania">
+                <img src="images/img_mania1.jpg" alt="" />
+                <i>엘레양</i>
+              </div>
+            </li>
+            <li>
+              <a href=""><img src="images/img_maniamain3.jpg" alt="" /></a>
+              <div class="bright"></div>
+              <div class="mania">
+                <img src="images/img_mania3.jpeg" alt="" />
+                <i>소연</i>
+              </div>
+            </li>
+            <li>
+              <a href=""><img src="images/img_maniamain4.jpg" alt="" /></a>
+              <div class="bright"></div>
+              <div class="mania">
+                <img src="images/img_mania4.jpg" alt="" />
+                <i>수아</i>
+              </div>
+            </li>
+            <li>
+              <a href=""><img src="images/img_maniamain5.jpg" alt="" /></a>
+              <div class="bright"></div>
+              <div class="mania">
+                <img src="images/img_mania5.jpg" alt="" />
+                <i>toki</i>
+              </div>
+            </li>
+            <li>
+              <a href=""><img src="images/img_maniamain6.jpg" alt="" /></a>
+              <div class="bright"></div>
+              <div class="mania">
+                <img src="images/img_mania6.jpg" alt="" />
+                <i>그레이홈</i>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 6. 뭉치면 할인 -->
+        <section class="group_dc clear">
+          <h3>뭉치면 할인<span> UP</span></h3>
+          <p>모이면 모일수록 커지는 할인쿠폰 혜택을 만나보세요 !</p>
+
+          <div class="left">
+            <a href="">
+              <img src="images/bg_groupdc.jpg" alt="" />
+              <div class="left_text">
+                <div class="title_text">
+                  <span>그린티 롤케이크(화이트)</span>
+                  <em>신청기간 08.09 ~ 08.22</em>
+                </div>
+                <div class="price_text">
+                  <del>25,000원</del>
+                  <p>현재 할인가<strong>16,250원</strong></p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="right">
+            <div class="coupon">
+              <strong>35%</strong>
+              <span>쿠폰 지급예정</span>
+              <p>
+                <i>959개</i> 달성성공! <strong>35% </strong>쿠폰이 지급됩니다.
+              </p>
+            </div>
+            <div class="leaf clear">
+              <div class="leaf1"><img src="images/leaf_on_1.png" alt="" /></div>
+              <div class="leaf2"><img src="images/leaf_on_2.png" alt="" /></div>
+              <div class="leaf3"><img src="images/leaf_on_3.png" alt="" /></div>
+              <div class="leaf4"><img src="images/leaf_on_2.png" alt="" /></div>
+              <div class="leaf5">
+                <img src="images/leaf_on_10.png" alt="" />
+              </div>
+            </div>
+            <div class="percent clear">
+              <em>100</em>
+              <em>200</em>
+              <em>300개 <i>달성</i></em>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. 샵 -->
+        <section class="shop">
+          <h3>Shop</h3>
+          <p>오설록이 준비한 티 라인에서 당신이 찾는 티 스타일을 찾아보세요.</p>
+
+          <div class="slider_container clear">
+            <ul class="category clear">
+              <li><a href="">명차</a></li>
+              <li><a href="">녹차/발효차/홍차</a></li>
+              <li><a href="">허브티(무카페인)</a></li>
+              <li><a href="">블렌디드티</a></li>
+              <li><a href="">웰니스티</a></li>
+              <li><a href="">파우더</a></li>
+              <li><a href="">세트</a></li>
+              <li><a href="">오피스몰</a></li>
+              <li><a href="">베이커리</a></li>
+              <li><a href="">기프트몰</a></li>
+              <li><a href="">라이프스타일몰</a></li>
+            </ul>
+
+            <ul class="category_slider clear">
+              <li>
+                <div class="video">
+                  <video width="930" height="526" autoplay loop muted poster="images/bg_shop1.jpg">
+
+                
+                    <source src="images/vd_shop1.mp4"
+                            type="video/mp4">
+                
+                    I can't play video...
+                  </video>
+                  <p class="video_text">
+                    <a href=""><strong>명차</strong></a>
+                    <a href="">
+                      <em>고귀하고 품격 있는 티 라이프를 위한 <br />
+                        오설록의 명차 라인 입니다.</em>
+                    </a>
+                  </p>
+                </div>
+              </li>
+
+              <li>
+
+                <div class="video">
+                  <video width="930" height="526" autoplay loop muted poster="images/bg_shop2.jpg">
+                
+                    <source src="images/vd_shop2.mp4"
+                            type="video/mp4">
+                
+                    I can't play video...
+                  </video>
+                  <p class="video_text">
+                    <a href=""><strong>녹차/발효차/홍차</strong></a>
+                    <a href="">
+                      <em>유기농 제주 차밭에서 자란 <br />
+                        우리 녹차 발효차 라인 입니다.</em>
+                    </a>
+                  </p>
+                </div>
+                
+
+              </li>
+
+              <li>
+
+                <div class="video">
+                  <video width="930" height="526" autoplay loop muted poster="images/bg_shop3.jpg">
+
+          
+                    <source src="images/vd_shop3.mp4"
+                            type="video/mp4">
+                
+                    I can't play video...
+                  </video>
+                  <p class="video_text">
+                    <a href=""><strong>허브티(무카페인)</strong></a>
+                    <a href="">
+                      <em>꽃잎, 과일향이 가득한 <br />
+                        풍미가 돋보이는 라인 입니다.</em>
+                    </a>
+                  </p>
+                </div>
+
+              </li>
+
+              <li>
+
+                <div class="video">
+                  <video width="930" height="526" autoplay loop muted poster="images/bg_shop4.jpg">
+
+                    <source src="images/vd_shop4.mp4"
+                            type="video/mp4">
+                
+                    I can't play video...
+                  </video>
+                  <p class="video_text">
+                    <a href=""><strong>블렌디드티</strong></a>
+                    <a href="">
+                      <em>차와 함께 <br />
+                        다른 풍미를 느낄 수 있는 라인 입니다.</em>
+                    </a>
+                  </p>
+                </div>
+
+              </li>
+
+              <li>
+
+                <div class="video">
+                  <video width="930" height="526" autoplay loop muted poster="images/bg_shop5.jpg">
+                    <source src="images/vd_shop5.mp4"
+                            type="video/mp4">
+                
+                    I can't play video...
+                  </video>
+                  <p class="video_text">
+                    <a href=""><strong>웰니스티</strong></a>
+                    <a href="">
+                      <em>웰니스 티를 <br />
+                        소개합니다.</em>
+                    </a>
+                  </p>
+                </div>
+
+              </li>
+
+              <li>
+
+                <div class="video">
+                  <video width="930" height="526" autoplay loop muted poster="images/bg_shop6.jpg">
+                
+                    <source src="images/vd_shop6.mp4"
+                            type="video/mp4">
+                
+                    I can't play video...
+                  </video>
+                  <p class="video_text">
+                    <a href=""><strong>파우더</strong></a>
+                    <a href="">
+                      <em>파우더 형태의 찬물에도 <br />
+                        잘 녹는 제품들입니다.</em>
+                    </a>
+                  </p>
+                </div>
+
+              </li>
+
+              <li>
+
+                <div class="video">
+                  <video width="930" height="526" autoplay loop muted poster="images/bg_shop7.jpg">
+                
+                    <source src="images/vd_shop7.mp4"
+                            type="video/mp4">
+                
+                    I can't play video...
+                  </video>
+                  <p class="video_text">
+                    <a href=""><strong>세트</strong></a>
+                    <a href="">
+                      <em>세트 상품으로 <br />
+                        특색 있게 즐길 수 있는 제품들입니다.</em>
+                    </a>
+                  </p>
+                </div>
+
+              </li>
+
+              <li>
+
+                <div class="video">
+                  <video width="930" height="526" autoplay loop muted poster="images/bg_shop8.jpg">
+                    <source src="images/vd_shop8.mp4"
+                            type="video/mp4">
+                
+                    I can't play video...
+                  </video>
+                  <p class="video_text">
+                    <a href=""><strong>오피스몰</strong></a>
+                    <a href="">
+                      <em> 사무실 분위기를 한층<br />
+                        UP 시켜줄 제품들입니다.</em>
+                    </a>
+                  </p>
+                </div>
+
+
+              </li>
+
+              <li>
+
+                <div class="video">
+                  <video width="930" height="526" autoplay loop muted poster="images/bg_shop9.jpg">
+                
+                    <source src="images/vd_shop9.mp4"
+                            type="video/mp4">
+                
+                    I can't play video...
+                  </video>
+                  <p class="video_text">
+                    <a href=""><strong>베이커리</strong></a>
+                    <a href="">
+                      <em>오설록만의<br />
+                        베이커리 제품을 만날 수 있습니다.</em>
+                    </a>
+                  </p>
+                </div>
+
+              </li>
+
+              <li>
+
+                <div class="video">
+                  <video width="930" height="526" autoplay loop muted poster="images/bg_shop10.jpg">
+
+                    <source src="images/vd_shop10.mp4"
+                            type="video/mp4">
+                
+                    I can't play video...
+                  </video>
+                  <p class="video_text">
+                    <a href=""><strong>기프트몰</strong></a>
+                    <a href="">
+                      <em>소중한 분에게 감사한 마음을 <br />
+                        전달할 수 있는 제품 라인입니다.</em>
+                    </a>
+                  </p>
+                </div>
+
+              </li>
+
+              <li>
+
+                <div class="video">
+                  <video width="930" height="526" autoplay loop muted poster="images/bg_shop11.jpg">
+
+                    <source src="images/vd_shop11.mp4"
+                            type="video/mp4">
+                
+                    I can't play video...
+                  </video>
+                  <p class="video_text">
+                    <a href=""><strong>라이프스타일몰</strong></a>
+                    <a href="">
+                      <em>자신의 라이프 스타일에 맞는 <br />
+                        제품을 선택할 수 있는 코너입니다.</em>
+                    </a>
+                  </p>
+                </div>
+
+              </li>
+              
+            </ul>
+
+            <div class="dim left_side"></div>
+            <div class="dim right_side"></div>
+          </div>
+
+          <!-- 제품 리스트 보이는 곳 -->
+          <article>
+            <div class="sort clear">
+              <ul>
+                <li><a href="#">리뷰많은순</a></li>
+                <li><a href="#">베스트셀러</a></li>
+                <li><a href="#">할인상품</a></li>
+              </ul>
+            </div>
+  
+            <div class="product_list">
+              <!-- 리뷰순 리스트 -->
+              <ul class="review clear">
+                <li>
+                  <a href="" class="prod_img"><img src="images/img_weekly11.png" alt="" /></a>
+                  <b class="prod_layer">
+                    
+                  </b>
+                  <img src="images/label_best.gif" alt="best" />
+                  <a href="" class="prod_name"
+                    ><strong>제주 녹차 크레이프 케이크</strong></a
+                  >
+                  <span>20,000원</span>
+  
+                  <div class="social">
+                    <div class="like">
+                      <a href="">
+                        <img src="images/ico_like.gif" alt="" />
+                      </a>
+                      <em>53</em>
+                    </div>
+                    <div class="comment">
+                      <a href="">
+                        <img src="images/ico_comment.gif" alt="" />
+                      </a>
+                      <em>520</em>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="prod_img"><img src="images/img_weekly12.png" alt="" /></a>
+                  <b class="prod_layer">
+                    
+                  </b>
+                  <img src="images/label_best.gif" alt="best" />
+                  <a href="" class="prod_name"
+                    ><strong>그린티라떼더블샷 10입</strong></a
+                  >
+                  <span>15,000원</span>
+  
+                  <div class="social">
+                    <div class="like">
+                      <a href="">
+                        <img src="images/ico_like.gif" alt="" />
+                      </a>
+                      <em>43</em>
+                    </div>
+                    <div class="comment">
+                      <a href="">
+                        <img src="images/ico_comment.gif" alt="" />
+                      </a>
+                      <em>456</em>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="prod_img"><img src="images/img_weekly13.png" alt="" /></a>
+                  <b class="prod_layer">
+                    
+                  </b>
+                  <img src="images/label_best.gif" alt="best" />
+                  <img src="images/label_sale.gif" alt="sale" />
+                  <a href="" class="prod_name"
+                    ><strong>그린티웨하스 100g</strong></a
+                  >
+                  <span>6,500원</span>
+  
+                  <div class="social">
+                    <div class="like">
+                      <a href="">
+                        <img src="images/ico_like.gif" alt="" />
+                      </a>
+                      <em>39</em>
+                    </div>
+                    <div class="comment">
+                      <a href="">
+                        <img src="images/ico_comment.gif" alt="" />
+                      </a>
+                      <em>425</em>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="prod_img"><img src="images/img_weekly14.png" alt="" /></a>
+                  <b class="prod_layer">
+                    
+                  </b>
+                  <img src="images/label_best.gif" alt="best" />
+                  <img src="images/label_sale.gif" alt="sale" />
+                  <a href="" class="prod_name"
+                    ><strong>그린티 랑드샤 10입</strong></a
+                  >
+                  <span>8,500원</span>
+  
+                  <div class="social">
+                    <div class="like">
+                      <a href="">
+                        <img src="images/ico_like.gif" alt="" />
+                      </a>
+                      <em>37</em>
+                    </div>
+                    <div class="comment">
+                      <a href="">
+                        <img src="images/ico_comment.gif" alt="" />
+                      </a>
+                      <em>398</em>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+  
+              <!-- 판매순 리스트 -->
+              <ul class="best clear" style="display: none;">
+                <li>
+                  <a href="" class="prod_img"><img src="images/img_weekly15.png" alt="" /></a>
+                  <b class="prod_layer">
+                    
+                  </b>
+                  <img src="images/label_best.gif" alt="best" />
+                  <a href="" class="prod_name"><strong>레드파파야블랙티 20입(피라미드)</strong></a>
+                  <span>23,000 원</span>
+  
+                  <div class="social">
+                    <div class="like">
+                      <a href="">
+                        <img src="images/ico_like.gif" alt="" />
+                      </a>
+                      <em>8</em>
+                    </div>
+                    <div class="comment">
+                      <a href="">
+                        <img src="images/ico_comment.gif" alt="" />
+                      </a>
+                      <em>15</em>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="prod_img"><img src="images/img_weekly12.png" alt="" /></a>
+                  <b class="prod_layer">
+                    
+                  </b>
+                  <img src="images/label_best.gif" alt="best" />
+                  <a href="" class="prod_name"><strong>그린티라떼더블샷 10입</strong></a>
+                  <span>12,000 원</span>
+  
+                  <div class="social">
+                    <div class="like">
+                      <a href="">
+                        <img src="images/ico_like.gif" alt="" />
+                      </a>
+                      <em>43</em>
+                    </div>
+                    <div class="comment">
+                      <a href="">
+                        <img src="images/ico_comment.gif" alt="" />
+                      </a>
+                      <em>456</em>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="prod_img"><img src="images/img_weekly16.png"" alt="" /></a>
+                  <b class="prod_layer">
+                    
+                  </b>
+                  <img src="images/label_best.gif" alt="best" />
+                  <a href="" class="prod_name"><strong>삼다연제주영귤 20입(피라미드)</strong></a>
+                  <span>23,000 원</span>
+  
+                  <div class="social">
+                    <div class="like">
+                      <a href="">
+                        <img src="images/ico_like.gif" alt="" />
+                      </a>
+                      <em>45</em>
+                    </div>
+                    <div class="comment">
+                      <a href="">
+                        <img src="images/ico_comment.gif" alt="" />
+                      </a>
+                      <em>100</em>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="prod_img"><img src="images/img_weekly24.png" alt="" /></a>
+                  <b class="prod_layer">
+                    
+                  </b>
+                  <img src="images/label_best.gif" alt="best" />
+                  <a href="" class="prod_name"><strong>제주동백꽃티 20입(티백)</strong></a>
+                  <span>8,500 원</span>
+  
+                  <div class="social">
+                    <div class="like">
+                      <a href="">
+                        <img src="images/ico_like.gif" alt="" />
+                      </a>
+                      <em>54</em>
+                    </div>
+                    <div class="comment">
+                      <a href="">
+                        <img src="images/ico_comment.gif" alt="" />
+                      </a>
+                      <em>3</em>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+  
+              <!-- 할인순 리스트 -->
+              <ul class="discount clear" style="display: none;">
+                <li>
+                  <a href="" class="prod_img"><img src="images/img_weekly18.png" alt="" /></a>
+                  <b class="prod_layer">
+                    
+                  </b>
+                  <img src="images/label_best.gif" alt="best" />
+                  <a href="" class="prod_name"><strong>오피스Tea(삼다꿀배티)</strong></a>
+                  <span>8,500 원</span>
+                  <del>10,000 원</del> <i>(15% &darr;)</i>
+  
+                  <div class="social">
+                    <div class="like">
+                      <a href="">
+                        <img src="images/ico_like.gif" alt="" />
+                      </a>
+                      <em>255</em>
+                    </div>
+                    <div class="comment">
+                      <a href="">
+                        <img src="images/ico_comment.gif" alt="" />
+                      </a>
+                      <em>25</em>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="prod_img"><img src="images/img_weekly19.png" alt="" /></a>
+                  <b class="prod_layer">
+                    
+                  </b>
+                  <img src="images/label_best.gif" alt="best" />
+                  <a href="" class="prod_name"><strong>오피스Tea(트로피컬블랙티)</strong></a>
+                  <span>8,500 원</span>
+                  <del>10,000 원</del> <i>(15% &darr;)</i>
+  
+                  <div class="social">
+                    <div class="like">
+                      <a href="">
+                        <img src="images/ico_like.gif" alt="" />
+                      </a>
+                      <em>54</em>
+                    </div>
+                    <div class="comment">
+                      <a href="">
+                        <img src="images/ico_comment.gif" alt="" />
+                      </a>
+                      <em>32</em>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="prod_img"><img src="images/img_weekly21.png" alt="" /></a>
+                  <b class="prod_layer">
+                    
+                  </b>
+                  <img src="images/label_best.gif" alt="best" />
+                  <img src="images/label_sale.gif" alt="sale" />
+                  <a href="" class="prod_name"><strong>그린티 웨하스</strong></a>
+                  <span>6,500 원</span>
+                  <del>9,750 원</del> <i>(15% &darr;)</i>
+  
+                  <div class="social">
+                    <div class="like">
+                      <a href="">
+                        <img src="images/ico_like.gif" alt="" />
+                      </a>
+                      <em>39</em>
+                    </div>
+                    <div class="comment">
+                      <a href="">
+                        <img src="images/ico_comment.gif" alt="" />
+                      </a>
+                      <em>425</em>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="prod_img"><img src="images/img_weekly22.png" alt="" /></a>
+                  <b class="prod_layer">
+                    
+                  </b>
+                  <img src="images/label_best.gif" alt="best" />
+                  <img src="images/label_sale.gif" alt="sale" />
+                  <a href="" class="prod_name"><strong>그린티 랑드샤 10입</strong></a>
+                  <span>8,500 원</span>
+                  <del>10,000 원</del> <i>(15% &darr;)</i>
+  
+                  <div class="social">
+                    <div class="like">
+                      <a href="">
+                        <img src="images/ico_like.gif" alt="" />
+                      </a>
+                      <em>37</em>
+                    </div>
+                    <div class="comment">
+                      <a href="">
+                        <img src="images/ico_comment.gif" alt="" />
+                      </a>
+                      <em>398</em>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+  
+              
+            </div>
+            <a href="" class="more">전체 상품 보기</a>
+          </article>
+          
+        </section>
+
+
+        <!-- 이미지 호버 메뉴 스크립트(공통) -->
+        <script>
+          (function(){
+            const prodLayer = document.querySelectorAll('main li a.prod_img + b.prod_layer'),
+                prodImg = document.querySelectorAll('main li a.prod_img');
+
+            for(let i = 0; i < prodImg.length; i++){
+              let prodImg_src = prodImg[i].children[0].src;
+              let split_src = prodImg_src.split(".")[0]
+              let imgIndex = split_src.slice(-2)
+              prodImg[i].addEventListener('mouseenter', function(){
+                
+                if(prodLayer[i].style.opacity === "0"){
+                  prodLayer[i].style.opacity = "1"
+                  prodImg[i].children[0].src = `images/img_weekly${imgIndex}1.png`
+                } else {
+                  prodLayer[i].addEventListener("mouseenter", function(){
+                    this.style.opacity = "1"
+                    prodImg[i].children[0].src = `images/img_weekly${imgIndex}1.png`
+                  })
+                  prodLayer[i].addEventListener("mouseleave", function(){
+                    this.style.opacity = "0"
+                    prodImg[i].children[0].src = `images/img_weekly${imgIndex}.png`
+                  })
+                }
+              })
+              prodImg[i].addEventListener('mouseleave', function(){
+                  prodLayer[i].style.opacity = "0";
+                  prodImg[i].children[0].src = `images/img_weekly${imgIndex}.png`
+              })
+            }            
+          })();
+
+        </script> 
+
+
+        <!-- 리뷰많은순 / 베스트셀러 / 할인상품 전환 스크립트 -->
+        <script>
+          (function(){
+            const btnShop = document.querySelectorAll("main .shop .sort ul li"),
+              shopProductList = document.querySelectorAll("main .shop .product_list ul");
+                btnShop[0].classList.add("selected")
+                btnShop[1].classList.remove("selected")
+                btnShop[2].classList.remove("selected")
+                
+              for(let i = 0; i < btnShop.length; i++){
+                btnShop[i].addEventListener("click", function(e){
+                  if(e.target.tagName === 'A') {
+                    e.preventDefault();
+
+                    switch(e.target.textContent){
+                      case '리뷰많은순': 
+                          btnShop[0].classList.add("selected")
+                          btnShop[1].classList.remove("selected")
+                          btnShop[2].classList.remove("selected")
+
+                          shopProductList[0].style.display = "block";
+                          shopProductList[1].style.display = "none";
+                          shopProductList[2].style.display = "none";
+                          break;
+                      case '베스트셀러': 
+                          btnShop[1].classList.add("selected")
+                          btnShop[0].classList.remove("selected")
+                          btnShop[2].classList.remove("selected")
+
+                          shopProductList[0].style.display = "none";
+                          shopProductList[1].style.display = "block";
+                          shopProductList[2].style.display = "none";
+                          break;
+                      case '할인상품': 
+                          btnShop[2].classList.add("selected")
+                          btnShop[0].classList.remove("selected")
+                          btnShop[1].classList.remove("selected")
+
+                          shopProductList[0].style.display = "none";
+                          shopProductList[1].style.display = "none";
+                          shopProductList[2].style.display = "block";  
+                          break;
+                  }
+                }})
+              }
+            })();
+        </script>
+
+
+
+
+        <!-- 8. 인스타그램 -->
+        <section class="sns">
+          <em>Follow Us</em>
+          <strong>#OSULLOC</strong>
+          <ul class="timeline clear">
+            <li>
+              <a href=""><img src="images/img_sns1.jpg" alt="" /></a>
+              <div class="bright"></div>
+            </li>
+            <li>
+              <a href=""><img src="images/img_sns2.jpg" alt="" /></a>
+              <div class="bright"></div>
+            </li>
+            <li>
+              <a href=""><img src="images/img_sns3.jpg" alt="" /></a>
+              <div class="bright"></div>
+            </li>
+            <li>
+              <a href=""><img src="images/img_sns4.jpg" alt="" /></a>
+              <div class="bright"></div>
+            </li>
+            <li>
+              <a href=""><img src="images/img_sns5.jpg" alt="" /></a>
+              <div class="bright"></div>
+            </li>
+            <li>
+              <a href=""><img src="images/img_sns6.jpg" alt="" /></a>
+              <div class="bright"></div>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+
+
+
+      <!-- 푸터 부분 -->
+      <footer>
+        <div class="notice_line clear">
+          <div class="inner">
+            <div class="notice clear">
+              <span>공지사항</span>
+              <a href=""
+                ><i>
+                  [공지] 구매사은품 지류쿠폰 지급 종료 및 혜택 변경 예정 안내
+                </i></a
+              >
+              <a href="">+더보기</a>
+            </div>
+
+            <div class="channel clear">
+              <a href=""><img src="images/sns_f.png" alt="" /></a>
+              <a href=""><img src="images/sns_i.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact_line clear">
+          <div class="inner">
+            <div class="footer_cs">
+              <span>고객상담센터 · 주문/배송문의</span>
+              <a href="tel:080-805-5555" class="phone">080-805-5555</a>
+              <em>평일 09:30 - 17:00 (점심 11:30 - 13:00)</em>
+            </div>
+
+            <div class="footer_order">
+              <span>특판, 대량구매 문의</span>
+              <a href="mailto:help@osulloc.com">help@osulloc.com</a>
+              <i>010-2515-1979 / 카톡ID : osullocmall</i>
+              <em>평일 09:30 - 17:00 (점심 11:30 - 13:00)</em>
+            </div>
+            <ul class="footer_menu clear">
+              <li>
+                <a href="">
+                  <img src="images/ico_footer1.png" alt="" />
+                  <span>매장안내</span>
+                </a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="images/ico_footer2.png" alt="" />
+                  <span>멤버십혜택</span>
+                  </a
+                >
+              </li>
+              <li>
+                <a href=""><img src="images/ico_footer3.png" alt="" />
+                  <span>FAQ</span>
+                </a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="images/ico_footer4.png" alt="" />
+                  <span>1:1문의</span>
+                  </a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info_line clear">
+          <div class="inner">
+            <a href="" class="logo"
+              ><img src="images/logo_footer.png" alt=""
+            /></a>
+
+            <div class="info">
+              <ul class="list clear">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">서비스 이용약관</a></li>
+                <li><a href="">개인정보 처리방침</a></li>
+                <li><a href="">영상정보 처리방침</a></li>
+                <li><a href="">뷰티포인트</a></li>
+                <li><a href="">사이트맵</a></li>
+                <li><a href="">전자공고</a></li>
+              </ul>
+
+              <div class="corp_info">
+                <p>㈜ 오설록</p>
+                <p>
+                  대표이사:서혁제 주소:서울특별시 용산구 한강대로 100,
+                  14층(한강로2가) 사업자등록번호: 390-87-01499
+                </p>
+                <button type="button">사업자 정보확인 &ngt; </button>
+                <p>
+                  통신판매업신고번호:2019-서울용산-1173호 호스팅제공자: ㈜오설록
+                </p>
+                <p>
+                  (주)오설록은 오설록 브랜드를 제외한 입점 브랜드에 대해서는
+                  통신판매중개자 이며 통신판매의 당사자가 아닙니다.
+                </p>
+                <p>
+                  따라서 입점판매자가 등록한 상품정보 및 거래에 대해 책임을 지지
+                  않습니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="inisis">
+              <span>(주)이니시스 구매안전서비스</span>
+              <a href=""><img src="images/logo_footer_inisis.png" alt="" /></a>
+              <p>
+                고객님의 안전거래를 위해 현금 거래에 대해 이니페이
+                에스크로서비스를 이용하실 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <a href="#" class="gotop">Top</a>
+    </div>
+  </body>
+
+
+  
+  <!--(스크롤) go top 스트립트 & gnb main 스크립트 -->
+  <script>
+    (function(){
+      const btnTop = document.querySelector('.gotop'),
+          gnb = document.querySelector('.gnb'),
+          logo = document.querySelector('h1');
+
+      window.addEventListener('scroll', function(){ 
+          let evScroll = document.querySelector('html').scrollTop;
+
+          if(evScroll < 800){
+            btnTop.style = 'display: none;';
+          } else {
+            btnTop.style = 'display: block; right: 10px';
+            btnTop.addEventListener('click', function(){
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            })
+          }
+
+          if(evScroll > 90){
+            gnb.classList.add('fixed')
+            logo.classList.add('scroll')
+          } else {
+            gnb.classList.remove('fixed')
+            logo.classList.remove('scroll')
+          }
+      });
+    })();
+  </script>
+
+</html>

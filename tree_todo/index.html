@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>tree</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <span class="header__date"></span>
+        <p class="header__clock"></p>
+      </header>
+
+      <main>
+        <section class="main__window"></section>
+
+        <section class="main__todo">
+          <form>
+            <input type="text" placeholder="write a todo" />
+            <button type="reset" class="resetBtn">x</button>
+          </form>
+
+          <ul class="todo__lists pending"></ul>
+          <ul class="todo__lists finished"></ul>
+        </section>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

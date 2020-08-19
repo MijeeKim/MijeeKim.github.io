@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Rainbow Holdem</title>
+  </head>
+  <body>
+    <section>
+      <div class="title">
+        <div class="line">
+          <h1>Rainbow Holdem</h1>
+          <button class="viewRule">rule</button>
+          <div class="btnArea">
+            <button class="ready" type="button">ready</button>
+            <button class="start" type="button">start</button>
+            <button class="reset" type="reset">reset</button>
+          </div>
+        </div>
+      </div>
+      <div class="board">
+        <div class="line">
+          <div class="dealer char">
+            <div class="profile dealer__profile">
+              <img src="./chars/dealer.png" alt="" />
+            </div>
+
+            <div class="cardArea dealder__cardArea">
+              <div class="card dealerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70/ff0000" alt="" />
+              </div>
+              <div class="card dealerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70/00ff00" alt="" />
+              </div>
+              <div class="card dealerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70/0000ff" alt="" />
+              </div>
+              <div class="card dealerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line">
+          <div class="betting">
+            <p>총 베팅된 칩의 개수 <span class="total">00</span></p>
+            <button class="bettingBtn" type="button">베팅</button>
+          </div>
+        </div>
+        <div class="line">
+          <div class="player char mine">
+            <p class="myName">내이름이다</p>
+            <div class="profile player__profile">
+              <img src="https:/via.placeholder.com/100x100" alt="" />
+            </div>
+
+            <div class="cardArea player__cardArea">
+              <div class="card playerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70/" alt="" />
+              </div>
+              <div class="card playerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70" alt="" />
+              </div>
+              <div class="card playerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="player char">
+            <div class="profile player__profile">
+              <img src="./chars/player1.png" alt="" />
+            </div>
+
+            <div class="cardArea player__cardArea">
+              <div class="card playerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70/ff0000" alt="" />
+              </div>
+              <div class="card playerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70" alt="" />
+              </div>
+              <div class="card playerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="player char">
+            <div class="profile player__profile">
+              <img src="./chars/player2.png" alt="" />
+            </div>
+
+            <div class="cardArea player__cardArea">
+              <div class="card playerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70/ff0000" alt="" />
+              </div>
+              <div class="card playerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70" alt="" />
+              </div>
+              <div class="card playerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="player char">
+            <div class="profile player__profile">
+              <img src="./chars/player3.png" alt="" />
+            </div>
+
+            <div class="cardArea player__cardArea">
+              <div class="card playerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70/ff0000" alt="" />
+              </div>
+              <div class="card playerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70" alt="" />
+              </div>
+              <div class="card playerCard">
+                <div class="back"></div>
+                <img src="https://via.placeholder.com/50x70" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <article class="popup settingPopup">
+        <div class="popup__bottom inputSpace">
+          <div class="line">
+            <label for="nickname">닉네임</label>
+            <input type="text" name="nickname" />
+          </div>
+
+          <div class="line">
+            <button class="character">
+              <img src="./chars/my1.png" alt="" />
+            </button>
+            <button class="character">
+              <img src="./chars/my2.png" alt="" />
+            </button>
+            <button class="character">
+              <img src="./chars/my3.png" alt="" />
+            </button>
+            <button class="character">
+              <img src="./chars/my4.png" alt="" />
+            </button>
+          </div>
+          <!-- <div class="line">
+            <button type="button">선택 완료</button>
+          </div> -->
+        </div>
+        <div>
+          <button class="close" type="button">완료</button>
+        </div>
+      </article>
+
+      <article class="popup bettingPopup">
+        <div class="popup__top notice">
+          <p>배팅 방법</p>
+          <p>
+            1. 앞 사람이 배팅한 칩의 개수와 같은 개수를 배팅하려면 call 버튼을
+            누른다.
+          </p>
+          <p>2. call의 개수보다 많이 입력하려면 화살표를 누른다.</p>
+          <p>3. 배팅이 완료되면 배팅 완료 버튼을 누른다.</p>
+          <p>혹시 배팅없이 이번 판을 포기하고 싶으면 die 버튼을 누른다.</p>
+        </div>
+        <div class="popup__bottom btnSpace">
+          <input type="number" />
+          <button type="button">call</button>
+          <button type="button">
+            die
+          </button>
+        </div>
+        <div>
+          <button class="close" type="button">배팅완료</button>
+        </div>
+      </article>
+
+      <article class="popup rulePopup">
+        <div class="popup__top notice">
+          <p>배팅 방법</p>
+          <p>
+            1. 앞 사람이 배팅한 칩의 개수와 같은 개수를 배팅하려면 call 버튼을
+            누른다.
+          </p>
+          <p>2. call의 개수보다 많이 입력하려면 화살표를 누른다.</p>
+          <p>3. 배팅이 완료되면 배팅 완료 버튼을 누른다.</p>
+          <p>혹시 배팅없이 이번 판을 포기하고 싶으면 die 버튼을 누른다.</p>
+        </div>
+        <div>
+          <button class="close" type="button">베팅 완료</button>
+        </div>
+      </article>
+    </section>
+
+    <script src="rainbow.js"></script>
+  </body>
+</html>

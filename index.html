@@ -1,37 +1,591 @@
-<!DICTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="ko">
   <head>
-    <title>CatLover To-do List</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>김미지: 포트폴리오</title>
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 1rem;
+      }
+
+      body {
+        font: normal 14px sans-serif;
+        overflow-x: hidden;
+        color: white;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.15);
+      }
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      p {
+        font-size: 1em;
+      }
+      em {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 0.6em;
+      }
+
+      img {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      /* common */
+
+      ul {
+        white-space: nowrap;
+        overflow-x: scroll;
+        -ms-overflow-style: none; /* IE 10+ */
+        overflow: -moz-scrollbars-none; /* Firefox */
+      }
+      li {
+        margin-right: 8px;
+        display: inline-block;
+        white-space: normal;
+      }
+
+      li:last-child {
+        margin-right: 0;
+      }
+
+      li > a {
+        display: block;
+        /* cursor: pointer; */
+      }
+
+      ul::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+      }
+
+      /* style */
+      header {
+        /* border: 1px solid blue; */
+        padding: 7px 0;
+        height: 5vh;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        vertical-align: middle;
+      }
+
+      header div {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      header nav ul {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      /* 소개 */
+      section:first-of-type {
+        margin-top: -80px;
+        position: relative;
+        overflow: hidden;
+        height: 95vh;
+        position: relative;
+      }
+
+      .gradient {
+        background: linear-gradient(
+          to right,
+          #1a2980 0%,
+          #3a1c71 20%,
+          #ffaf7b 70%,
+          #26d0ce 100%
+        );
+      }
+
+      section div.wave {
+        width: 150%;
+        height: 170%;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        border-radius: 35%;
+        animation: wave 10s infinite alternate linear;
+        overflow: hidden;
+        box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
+      }
+      section div.wave:hover {
+        animation-play-state: paused;
+      }
+
+      section div.moto {
+        position: absolute;
+        bottom: 30vh;
+        left: 5vw;
+        z-index: 1;
+        font-size: 1.5rem;
+      }
+
+      @keyframes wave {
+        from {
+          transform: rotate(0deg);
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+        from {
+          transform: rotate(360deg);
+          background-color: rgba(255, 255, 255, 0.4);
+        }
+      }
+
+      /* 자기소개 */
+      main article.profile {
+        border: 1px solid blue;
+        margin-top: 7vh;
+      }
+
+      /* 포트폴리오1_program */
+      section.programs {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      section article {
+        /* border: 1px solid green; */
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 1em;
+        width: 250px;
+        height: 250px;
+        margin: 25px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2),
+          0 4px 6px -2px rgba(0, 0, 0, 0.1);
+      }
+
+      section article a {
+        border-radius: inherit;
+        display: block;
+        width: inherit;
+        height: inherit;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      section article.weather_todo a {
+        background-image: url("thumbnails/weather_todo.png");
+      }
+      section article.tree_todo a {
+        background-image: url("thumbnails/tree_todo.png");
+      }
+      section article.rainbow a {
+        background-image: url("thumbnails/rainbow.png");
+      }
+      section article.catch a {
+        background-image: url("thumbnails/catch_my_mind.png");
+      }
+      section article.calculator a {
+        background-image: url("thumbnails/calculator.png");
+      }
+      /* 포트폴리오2_clone */
+      section.portfolio {
+        /* border: 1px solid red; */
+        height: 100vh;
+      }
+
+      section ul {
+        padding: 20vh 0 10vh;
+      }
+
+      section li {
+        border-radius: 1em;
+        font-size: 1rem;
+        width: 30vw;
+        margin: 0 2%;
+        overflow: hidden;
+      }
+      section li:first-child {
+        margin-left: 10%;
+      }
+      section li:last-child {
+        margin-right: 10%;
+      }
+
+      section li.selected {
+        width: 30%;
+        transform: scale(1.25);
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2),
+          0 4px 6px -2px rgba(0, 0, 0, 0.1);
+      }
+      section li.selected div {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      section li a {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: top center;
+      }
+
+      section li.osulloc a {
+        background-image: url("thumbnails/osulloc.png");
+      }
+
+      section li.microsoft a {
+        background-image: url("thumbnails/microsoft.png");
+      }
+
+      section li.microsoft_login a {
+        background-image: url("thumbnails/microsoft_login.png");
+      }
+
+      section li.kakao_clone a {
+        background-image: url("thumbnails/kakao_clone.png");
+      }
+
+      section li.brompton a {
+        background-image: url("thumbnails/brompton.png");
+      }
+
+      section li.polaroid a {
+        background-image: url("thumbnails/polaroid.png");
+      }
+      section li.clone1 a {
+        background-image: url("thumbnails/clone1.png");
+      }
+      section li.clone2 a {
+        background-image: url("thumbnails/clone2.png");
+      }
+      section li.clone3 a {
+        background-image: url("thumbnails/clone3.png");
+      }
+      section li.clone4 a {
+        background-image: url("thumbnails/clone4.png");
+      }
+      footer {
+        background-color: #1a2980;
+        height: 4vh;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .width960 {
+        border-top: 20px solid dodgerblue;
+        background-color: #efefef;
+        width: 350px;
+        height: 220px;
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        display: none;
+        color: #232323;
+      }
+
+      .width960 button {
+        all: unset;
+        padding: 5px 10px;
+        border-radius: 2px;
+        background-color: rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        color: white;
+      }
+
+      .width960 button:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+        background-color: dodgerblue;
+      }
+      .width960 button:focus {
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) inset;
+      }
+
+      /* scrollbar(비표준_chrome 한정) */
+      /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 5px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        /* background: #f1f1f1; */
+        background: transparent;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #666;
+      }
+
+      .goTop {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.1);
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        bottom: 10vh;
+        right: 2vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .goTop:hover {
+        background: rgba(0, 0, 0, 0.2);
+        color: #232323;
+      }
+
+      .keepScroll {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+      }
+      .keepScroll::before {
+        content: "";
+        display: block;
+        height: 50px;
+        border-left: 1px solid white;
+        position: absolute;
+        top: -300%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @media screen and (max-width: 960px) {
+        .width960 {
+          display: flex;
+        }
+      }
+    </style>
   </head>
-
   <body>
-    <div class="js-date">
-      <h2></h2>
-    </div>
-    <div class="js-clock">
-      <h1></h1>
-    </div>
+    <header>
+      <div><h1>미지의 세계</h1></div>
+      <nav>
+        <ul>
+          <li><a href="#profile">세계관 소개</a></li>
+          <li><a href="#portfolio">포트폴리오 보기</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="gradient">
+        <div class="wave"></div>
+        <div class="moto">
+          <p>It's Now or Never!</p>
+          <em>Publisher & Frontend Developer</em>
+        </div>
+        <div class="keepScroll">scroll</div>
+      </section>
+      <a name="profile"></a>
+      <article class="profile">
+        <h3>세계관 소개</h3>
+        <img src="" />
+        (((자기소개서 영역)))
+      </article>
+      <a name="portfolio"></a>
+      <section class="programs">
+        <article class="weather_todo">
+          <a href="weather_todo/index.html" target="blank">weather_todo</a>
+        </article>
+        <article class="tree_todo">
+          <a href="tree_todo/index.html" target="blank">tree_todo</a>
+        </article>
+        <article class="rainbow">
+          <a href="rainbow/index.html" target="blank">rainbow</a>
+        </article>
+        <article class="catch">
+          <a href="catch_my_mind/index.html" target="blank">catch my mind</a>
+        </article>
+        <article class="calculator">
+          <a href="calculator/index.html" target="blank">calculator</a>
+        </article>
+      </section>
+      <section class="portfolio clone">
+        <ul>
+          <li class="osulloc">
+            <a href="osulloc_clone/index.html" target="blank"> </a>
+            <div>
+              [Static Web] HTML, CSS, JavaScript, jQuery library
+            </div>
+          </li>
+          <li class="microsoft">
+            <a href="microsoft_clone/index.html" target="blank"></a>
+            <div>
+              [Responsive Web] HTML, CSS, JavaScript, jQuery library
+            </div>
+          </li>
+          <li class="microsoft_login">
+            <a href="microsoft_clone/login.html" target="blank"></a>
+            <div>
+              HTML, CSS
+            </div>
+          </li>
+          <li class="kakao_clone">
+            <a
+              href="https://frontendbud.github.io/kakao-clone/index.html"
+              target="blank"
+            ></a>
+            <div>
+              [App] HTML, CSS
+            </div>
+          </li>
+          <li class="brompton">
+            <a href="brompton/index.html" target="blank"></a>
+            <div>
+              [Static Web] Design, HTML, CSS, JavaScript, jQuery library
+            </div>
+          </li>
 
-    <form class="js-form form">
-      <input type="text" placeholder="What is your name?" />
-    </form>
+          <li class="polaroid">
+            <a
+              href="http://lovetaro25.dothome.co.kr/polaroid/"
+              target="blank"
+            ></a>
+            <div>
+              [Responsive Web] Design
+            </div>
+          </li>
+          <li class="clone1">
+            <a href="clone1/index.html" target="blank"></a>
+            <div>
+              HTML, CSS
+            </div>
+          </li>
+          <li class="clone2">
+            <a href="clone2/index.html" target="blank"></a>
+            <div>
+              HTML, CSS
+            </div>
+          </li>
+          <li class="clone3">
+            <a href="clone3/index.html" target="blank"></a>
+            <div>
+              HTML, CSS
+            </div>
+          </li>
+          <li class="clone4">
+            <a href="clone4/index.html" target="blank"></a>
+            <div>
+              HTML, CSS
+            </div>
+          </li>
+        </ul>
+      </section>
+      <div class="width960">
+        <p>
+          960px 이상 화면에서 최적화 되어 있습니다 :)
+        </p>
+        <button>이 화면도 멋지다</button>
+      </div>
+      <div class="goTop"><img src="" />Top</div>
+    </main>
+    <footer>
+      <p>LOGO</p>
+      <a href="mailto:mijee.cat@gmail.com">mijee.cat@gmail.com</a>
+      <a href="https://github.com/MijeeKim" target="blank">
+        https://github.com/MijeeKim
+      </a>
+      <a href="tel:+821087955633">010-8795-5633</a>
+    </footer>
 
-    <h4 class="js-greetings greetings"></h4>
+    <!-- 포트폴리오 가로 스크롤 슬라이드 -->
+    <script>
+      (function () {
+        const portfolioSection = document.querySelector("section.portfolio"),
+          portfolios = document.querySelector("section.portfolio ul");
 
-    <form class="js-toDoForm toDoForm">
-      <input type="text" placeholder="Write a to do" />
-    </form>
+        portfolioSection.addEventListener("wheel", wheelHandler);
 
-    <ul class="js-toDoList toDoList"></ul>
+        function wheelHandler(e) {
+          e.preventDefault();
+          let delta = e.wheelDelta;
+          if (delta === -150) {
+            // wheel down -> move to left
+            portfolios.scrollLeft += 100;
+          } else {
+            // wheel up -> move to right
+            portfolios.scrollLeft -= 100;
+          }
+        }
 
-    <span class="js-weather weather"></span>
+        const btnGoTop = document.querySelector(".goTop");
 
-    <script src="clock.js"></script>
-    <script src="greeting.js"></script>
-    <script src="todo.js"></script>
-    <script src="bg.js"></script>
-    <script src="weather.js"></script>
+        btnGoTop.addEventListener("click", goTopHandler);
+
+        function goTopHandler() {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        portfolios.addEventListener("mouseover", hoverHandler);
+
+        function hoverHandler(e) {
+          for (let i = 0; i < portfolios.children.length; i++) {
+            portfolios.children[i].classList.remove("selected");
+          }
+          if (e.target.tagName !== "A") return;
+          e.target.parentNode.classList.add("selected");
+        }
+
+        const header = document.querySelector("header");
+        window.addEventListener("scroll", scrollHandler);
+
+        function scrollHandler(e) {
+          // console.log(window.scrollY);
+          let scrollY = window.scrollY;
+          if (scrollY >= 627) {
+            header.classList.add("gradient");
+          } else {
+            header.classList.remove("gradient");
+          }
+        }
+
+        const btnModal = document.querySelector(".width960 button");
+
+        btnModal.addEventListener("click", modalHandler);
+
+        function modalHandler(e) {
+          e.target.parentNode.style.display = "none";
+        }
+      })();
+    </script>
   </body>
 </html>

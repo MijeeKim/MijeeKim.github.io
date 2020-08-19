@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Brompton_BritishBike</title>
+
+    <!-- bx slider 시작-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- bx xlider 끝 -->
+   
+    <link rel="stylesheet" media="all" href="css/common.css" />
+    <style>
+      
+    </style>
+    <script>
+        // header _ bx slider 
+    $(document).ready(function(){
+        $('.header_slider').bxSlider({
+            pagerCustom: '.header_pager',
+            auto: true
+        });
+    });
+    
+
+
+    // folding _ bx slider 
+    $(document).ready(function(){
+        $('.folding_slider').bxSlider({
+            // pagerCustom: '.main_swiper'
+        });
+    });
+
+
+    // accessory _ bx slider 
+    $(document).ready(function(){
+        $('.accessory_slider').bxSlider({
+            pagerCustom: '.accessory_pager'
+        });
+    });
+
+    </script>
+</head>
+<body>
+<div class="wrap">
+
+    <header>
+        <div class="inner">
+            <nav class="header_top clear">
+                <h1 class="logo"><a href="#"><img src="images/h1_logo.png" alt="Brompton logo"></a></h1>
+                <ul class="gnb clear">
+                    <li>
+                        <a href="">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="">DESIGN</a>
+                    </li>
+                    <li>
+                        <a href="">PRODUCT</a>
+                    </li>
+                    <li>
+                        <a href="">OWNER</a>
+                    </li>
+                    <li>
+                        <a href="">NEWSLETTER</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/ico_search.svg" alt=""></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header_img">
+            <ul class="header_slider">
+                <li>
+                    <img src="images/header_pic1.jpg" alt="Brompton mainimage">
+                </li>
+                <li>
+                    <img src="images/header_pic2.jpg" alt="Brompton mainimage">
+                </li>
+                <li>
+                    <img src="images/header_pic3.jpg" alt="Brompton mainimage">
+                </li>
+                <li>
+                    <img src="images/header_pic4.jpg" alt="Brompton mainimage">
+                </li>
+            </ul>
+            <ul class="header_pager clear">
+               <li><a data-slide-index="0" href=""></a></li>
+               <li><a data-slide-index="1" href=""></a></li>
+               <li><a data-slide-index="2" href=""></a></li>
+               <li><a data-slide-index="3" href=""></a></li>
+            </ul>
+            <div class="header_copy arr_middle">
+                <strong>Design your own City</strong>
+                <p>"BROMPTON과 함께 만드는 당신만의 도시"</p>
+            </div>
+        </div>
+    </header>
+
+
+    <script>
+
+    // const headElem = document.querySelector('.header_top');
+    // console.log(headElem.children)
+    //         window.addEventListener('scroll', function(){
+    //             headElem.style.position = 'fixed';
+    //             headElem.style.backgroundColor = 'black';
+    //             console.log('aa')
+    //         });
+    
+    </script>
+
+
+    <main>
+        <article class="brandstory inner">
+            <header class="top arr_middle">
+                <em>BROMPTON</em>
+                <h2>BRAND STORY</h2>
+                <p>BROMPTON은 1976년에 설립되어 30여 년간 폴딩 자전거를 만들어 온 영국의 대표 자전거 브랜드입니다.</p>
+                <div class="iconbg">
+                    
+                </div>
+                <div class="enbox">
+                    <img class="quo-left" src="images/quo-left.png">
+                    <span>
+                        BROMPTON is a leading British bike brand
+                        and has been making folding bikes<br>
+                        that was founded in 1976<br>
+                        for more than 30 years.
+                    </span>
+                    <img class="quo-right" src="images/quo-right.png">
+                </div>
+            </header>
+
+            <div class="col2">
+                <div class="col2_sub">
+                    <div class="imgbox">
+                        <img src="images/img_brand1.png" alt="">
+                    </div>
+                    <div class="descbox">
+                        <h4>01 MADE FOR CITY</h4>
+                        <p>도시에 최적화된 폴딩 자전거, BROMPTON</p>
+                        <span>
+                            휴대성에 최적화된 디자인으로 무게도 10kg 내외입니다.<br>
+                            자전거를 타다가 지하철이나 버스에 들고 탈 수도 있습니다.<br>
+                            무엇보다 실내에 가지고 들어갈 수 있다는 것이 가장 큰 장점입니다.
+                        </span>
+                        <div class="readmore">
+                            <a href="">Read more</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col2_sub">
+                    <div class="imgbox right">
+                        <img src="images/img_brand2.png" alt="">
+                    </div>
+                    <div class="descbox left">
+                        <h4>02 MADE IN LONDON</h4>
+                        <p>본사 생산을 고집하는 '품질 우선주의'</p>
+                        <span>
+                            BROMPTON은 해외 어느 지역도 공장을 세우지 않고 본사 생산을 고집합니다.<br>
+                            70% 정도의 부품을 영국 본사 공장에서 생산하며<br>
+                            이는 '품질 우선주의'를 지키려는 BROMPTON의 자산입니다.
+                        </span>
+                        <div class="readmore">
+                            <a href="">Read more</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col2_sub">
+                    <div class="imgbox">
+                        <img src="images/img_brand3.png" alt="">
+                    </div>
+                    <div class="descbox arr_right">
+                        <h4>03 MADE FOR YOU</h4>
+                        <p>당신의 라이프스타일에 맞는 커스터마이징</p>
+                        <span>
+                            폴딩자전거라는 큰 틀에서 커스터마이징이 가능한 BROMPTON은<br>
+                            사용자의 라이프스타일을 반영할 수 있습니다.<br>
+                            다양한 디자인과 색상으로 당신만의 개성을 표현해보세요.
+                        </span>
+                        <div class="readmore">
+                            <a href="">Read more</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="folding arr_middle">
+                <h4>FOLDING BIKE</h4>
+                <p class="p_first">20초 안에 접히는 폴딩 자전거</p>
+                <p class="p_second">Can be folded in 20 seconds</p>
+                <div class="folding_bar">
+                    <img src="images/bg_foldingpager.png">
+                </div>
+                <ul class="folding_slider clear">
+                    <li><img src="images/img_folding1.png" alt=""></li>
+                    <li><img src="images/img_folding2.png" alt=""></li>
+                    <li><img src="images/img_folding3.png" alt=""></li>
+                </ul>
+            </div>
+        </article>
+
+        <div class="product">
+            <div class="top arr_middle">
+                <em>BROMPTON</em>
+                <h2>PRODUCT</h2>
+                <h3>01 &#35;BIKE</h3>
+            </div>
+
+            <div class="col2 inner">
+                <div class="col2_sub green">
+                    <div class="imgbox">
+                        <!-- ((color box bg))images/bg_greensquare.png -->
+                        <img src="images/img_product1.png" alt="">
+                    </div>
+                    <ul class="bike_slider right clear"> 
+                        <li>
+                            <a href=""><img src="images/img_product11.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/img_product12.png"" alt=""></a>
+                        </li>
+                    </ul>
+                    <div class="descbox arr_right">
+                        <p><a href="">BROMPTON ORIGINAL</a></p>
+                        <h4><a href="">M6L RACING GREEN-6 SPEEDS</a></h4>
+                        <span><a href="">BROMPTON의 Racing green은<br>
+                            본사에서 피막의 두께까지 최종 확인하는 메인 컬러입니다.</a>
+                        </span>
+                        <div class="download">
+                            <a href="">
+                                <img src="images/ico_down.png" alt="">
+                                <em>Download Specification</em>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col2_sub yellow">
+                    <div class="imgbox right">
+                        <!-- ((color box bg))images/bg_yellowsquare.png -->
+                        <img src="images/img_product2.png" alt="">
+                    </div>
+                    <ul class="bike_slider left clear"> 
+                        <li>
+                            <a href=""><img src="images/img_product21.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/img_product22.png" alt=""></a>
+                        </li>
+                    </ul>
+                    <div class="descbox left arr_left">
+                        <p><a href="">BROMPTON <img src="images/collabo_x.png" alt="cross"> LINE FRIENDS</a></p>
+                        <h4><a href="">COLORFUL CITY TOUR WITH SALLY</a></h4>
+                        <span><a href="">BROMPTON과 LINE FRIENDS의 두번째 COLLABORATION<br>
+                            샐리의 노란색과 주황색을 메인 컬러로 한 스페셜 에디션입니다.</a>
+                        </span>
+                        <div class="download">
+                            <a href="">
+                                <img src="images/ico_down.png" alt="">
+                                <em>Download Specification</em>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col2_sub orange">
+                    <div class="imgbox">
+                        <!-- ((color box bg))images/bg_orangesquare.png -->
+                        <img src="images/img_product3.png" alt="">
+                    </div>
+                    <div class="descbox arr_right">
+                        <p><a href="">BROMPTON SPECIAL EDITION_BLACK</a></p>
+                        <h4><a href="">M6L BLACK EDITION WITH ORANGE</a></h4>
+                        <span><a href="">도시의 밤을 테마로 한 BROMPTON의 프리미엄 라인, 블랙 에디션<br>
+                            메인 프레임은 블랙, 터키 그린, 오렌지, 프리미엄 블랙 라커 중 선택하실 수 있습니다.</a>
+                            
+                        </span>
+                        <div class="download">
+                            <a href="">
+                                <img src="images/ico_down.png" alt="">
+                                <em>Download Specification</em>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col2_sub turkish">
+                    <div class="imgbox right">
+                        <img src="images/img_product4.png" alt="">
+                    </div>
+                    <div class="descbox left arr_left">
+                        <p><a href="">BROMPTON SPECIAL EDITION_BLACK</a></p>
+                        <h4><a href="">S6L BLACK EDITION WITH TURKISH GREEN</a></h4>
+                        <span><a href="">블랙 에디션은 전 세계 모든 BROMPTON 스토어에서<br>
+                            S, M, H바와 2단, 6단 기어 중 선택하여 주문할 수 있습니다.</a>
+                            
+                        </span>
+                        <div class="download">
+                            <a href="">
+                                <img src="images/ico_down.png" alt="">
+                                <em>Download Specification</em>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accessory inner">
+                <h3>02 &#35;ACCESSORY</h3>
+                <ul class="accessory_pager clear">
+                    <li>
+                        <a data-slide-index="0" href=""><img src="images/ico_All_off.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a data-slide-index="1" href=""><img src="images/ico_clothing_off.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a data-slide-index="2" href=""><img src="images/ico_helmet_off.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a data-slide-index="3" href=""><img src="images/ico_bag_on.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a data-slide-index="4" href=""><img src="images/ico_bell_off.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a data-slide-index="5" href=""><img src="images/ico_wheel_off.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a data-slide-index="6" href=""><img src="images/ico_tool_off.png" alt=""></a>
+                    </li>
+                </ul>
+                <ul class="accessory_slider">
+                    <li>
+                        <a href=""><img src="images/img_accessory1.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/img_accessory1.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/img_accessory1.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/img_accessory1.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/img_accessory1.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/img_accessory1.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/img_accessory1.png" alt=""></a>
+                    </li>
+                </ul>
+                
+                <div class="readmore">
+                    <a href="">view more</a>
+                </div>
+            </div> 
+        </div>
+
+        <div class="commu">
+            <div class="top arr_middle">
+                <em>BROMPTON</em>
+                <h2>OWNER's COMMUNITY</h2>
+            </div>
+
+            <div class="inner">
+                <h4>&#35;INSTAGRAM</h4>
+                <ul class="col5 clear">
+                    <li>
+                        <div>
+                            <a href=""><img src="images/insta1.png" alt=""></a>
+                        </div>
+                        <div>
+                            <a href=""><img src="images/insta2.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href=""><img src="images/insta3.png" alt=""></a>
+                        </div>
+                        <div>
+                            <a href=""><img src="images/insta4.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href=""><img src="images/insta5.png" alt=""></a>
+                        </div>
+                        <div>
+                            <a href=""><img src="images/insta6.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href=""><img src="images/insta7.png" alt=""></a>
+                        </div>
+                        <div>
+                            <a href=""><img src="images/insta8.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href=""><img src="images/insta9.png" alt=""></a>
+                        </div>
+                        <div>
+                            <a href=""><img src="images/insta10.png" alt=""></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>  
+        </div>
+    </main>
+
+
+
+
+
+    <footer>
+        <div class="subscribe">
+            <div class="textbox">
+                <em>Keep in touch with BROMPTON</em>
+                BROMPTON의 새로운 소식을 여러분께 가장 먼저 전하고 싶습니다.
+            </div>
+            
+            <div class="formbox">
+                <input type="email" placeholder="Enter email to sign up for newsletter"/>
+                <button type="submit"><img src="images/ico_subs_arr.png" alt=""></button>
+            </div>
+        </div>
+
+        <ul class="col5 inner clear">
+            <li>
+                <a href="">ABOUT</a>
+                <ul>
+                    <li><a href="">Company</a></li>
+                    <li><a href="">CEO</a></li>
+                    <li><a href="">Awards</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">DESIGN</a>
+                <ul>
+                    <li><a href="">Handle bar</a></li>
+                    <li><a href="">Colour</a></li>
+                    <li><a href="">Mud guard/rack</a></li>
+                    <li><a href="">Gear</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">PRODUCT</a>
+                <ul>
+                    <li><a href="">Bike</a></li>
+                    <li><a href="">Accessory</a></li>
+                    <li><a href="">Online shop</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">OWNER</a>
+                <ul>
+                    <li><a href="">Event</a></li>
+                    <li><a href="">SNS</a></li>
+                    <li><a href="">Registration</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">NEWSLETTER</a>
+                <ul>
+                    <li><a href="">Sign up</a></li>
+                    <li><a href="">History</a></li>
+                    <li><a href="">Now</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="snslist clear">
+            <li><a href=""><img src="images/ico_facebook.png" alt=""></a></li>
+            <li><a href=""><img src="images/ico_twitter.png" alt=""></a></li>
+            <li><a href=""><img src="images/ico_insta.png" alt=""></a></li>
+            <li><a href=""><img src="images/ico_pinterest.png" alt=""></a></li>
+        </ul>
+
+        <a href="" class="footer_logo"><img src="images/footer_logo.png" alt="Brompton logo bottom"></a>
+        <em>Copyright&#169; 2019 BROMPTON by Mijee Kim All rights reserved</em>
+    </footer>
+    
+    <a href="#" class="gotop">Top</a>
+
+    <script>
+
+
+        const pagers = document.querySelectorAll('main .accessory_pager li a')
+        // console.log(pagers)
+        
+        for(let i = 0; i < pagers.length; i++) {
+            pagers[i].addEventListener('click', putOn)
+        }
+        
+        
+        function putOn(ev){
+            // console.log(ev.target.src)
+            let srcs = ev.target.src
+            console.log(srcs.includes('off'))
+            // if (srcs.includes('off')) {
+            //     srcs.remove = '_off';
+            //     srcs.add = '_on';
+            // } else {
+            //     srcs.add= 'off'
+            // }
+        }
+
+
+            // 위로 가기 버튼 스크립트
+        const btnTop = document.querySelector('.gotop')
+        window.addEventListener('scroll', function(){ 
+            // console.log(document.querySelector('html').scrollTop)
+            let evScroll = document.querySelector('html').scrollTop;
+            // console.log(evScroll);
+            if (evScroll > 971) btnTop.style.display = 'block';
+            if (evScroll < 970) btnTop.style.display = 'none';
+        });
+
+
+
+        // btnTop.onclick=scrollToTop(1000);
+
+        // function scrollToTop(scrollDuration) {
+        //     let scrollStep = -window.scrollY / (scrollDuration / 15),
+        //     scrollInterval = setInterval(function(){
+        //     if ( window.scrollY != 0 ) {
+        //         window.scrollBy( 0, scrollStep );
+        //     }
+        //     else clearInterval(scrollInterval); 
+        //     },400);
+        // };
+    
+    </script>
+</div>
+</body>
+
+</html>

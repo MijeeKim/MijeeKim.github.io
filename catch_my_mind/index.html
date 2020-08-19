@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Painting</title>
+  </head>
+  <body>
+    <h1>Catch My Mind</h1>
+    <div class="grid">
+      <canvas id="jsCanvas"> </canvas>
+      <section id="jsControls">
+        <article id="jsControls__range">
+          <label for="brushRange">brush size</label>
+          <br />
+          <input
+            type="range"
+            name="brushRange"
+            id="inputRange"
+            min="0.1"
+            max="5"
+            step="0.1"
+          />
+          <span id="jsSelectedSize">3</span>
+        </article>
+        <article id="jsControls__btns">
+          <button type="button" id="btnMode">
+            fill
+          </button>
+          <button type="reset" id="btnReset">
+            reset
+          </button>
+          <button type="submit" id="btnSave">
+            save
+          </button>
+        </article>
+        <article id="jsControls__colors">
+          <div class="color">
+            <label for="colorPicker">color picker</label>
+            <input
+              type="color"
+              id="colorPicker"
+              name="colorPicker"
+              value="#232323"
+            />
+            <span id="jsSelectedColor">#232323</span>
+          </div>
+        </article>
+      </section>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
