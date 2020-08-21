@@ -23,7 +23,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* position: relative; */
 }
 div.key {
   border: 3px solid transparent;

@@ -96,14 +96,7 @@
             if (e.propertyName !== "transform") return;
             e.target.classList.remove("playing");
             particle.classList.remove("play");
-
-            setTimeout(turnOn, 3000);
           }
-        }
-
-        function turnOn() {
-          console.log("aa");
-          drum.classList.remove("on");
         }
       })();
     </script>
