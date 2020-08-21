@@ -69,33 +69,44 @@
 
     <script>
       (function () {
-        const drum = document.querySelector("section.drum");
+        function turnOn() {
+          const drum = document.querySelector("section.drum");
 
-        window.addEventListener("keydown", playSound);
+          window.addEventListener("keydown", playSound);
 
-        function playSound(e) {
-          const audio = document.querySelector(
-            `audio[data-key="${e.keyCode}"]`
-          );
-          if (!audio) return;
-          audio.currentTime = 0;
-          audio.play();
-
-          const key = document.querySelector(`.key[data-key="${e.keyCode}"]`),
-            particle = document.querySelector(
-              `article[data-key="${e.keyCode}"]`
+          function playSound(e) {
+            const audio = document.querySelector(
+              `audio[data-key="${e.keyCode}"]`
             );
+            if (!audio) return;
+            audio.currentTime = 0;
+            audio.play();
 
-          key.classList.add("playing");
-          key.addEventListener("transitionend", transitionHandler);
+            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`),
+              particle = document.querySelector(
+                `article[data-key="${e.keyCode}"]`
+              );
 
-          drum.classList.add("on");
-          particle.classList.add("play");
+            key.classList.add("playing");
+            key.addEventListener("transitionend", transitionHandler);
 
-          function transitionHandler(e) {
-            if (e.propertyName !== "transform") return;
-            e.target.classList.remove("playing");
-            particle.classList.remove("play");
+            drum.classList.add("on");
+            particle.classList.add("play");
+
+            function transitionHandler(e) {
+              if (e.propertyName !== "transform") return;
+              e.target.classList.remove("playing");
+              particle.classList.remove("play");
+            }
+          }
+        }
+
+        window.addEventListener("resize", resizeHandler);
+        function resizeHandler() {
+          if (window.innerWidth >= 550) {
+            turnOn();
+          } else {
+            alert("550px 이상에서 실행해주세요:)");
           }
         }
       })();
