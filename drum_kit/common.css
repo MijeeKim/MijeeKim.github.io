@@ -1,0 +1,117 @@
+html {
+  font-size: 10px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: white;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+body {
+  background: url(images/drum_off.png) bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #f1f3f5;
+}
+
+.keys {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* position: relative; */
+}
+div.key {
+  border: 3px solid transparent;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  width: 10rem;
+  text-align: center;
+  font-size: 1.5rem;
+  transition: all 0.07s ease;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #d9eb4b;
+  box-shadow: 0 0 2rem #d9eb4b;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #d9eb4b;
+}
+
+section.drum {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(images/drum_on.png) bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0;
+}
+
+section.on {
+  opacity: 0.5;
+}
+
+article {
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.05s ease;
+  visibility: hidden;
+}
+article.clap {
+  background-image: url("./images/floor.png");
+}
+article.hihat {
+  background-image: url("./images/hihat.png");
+}
+article.kick {
+  background-image: url("./images/kick.png");
+}
+article.openhat {
+  background-image: url("./images/openhat.png");
+}
+article.boom {
+  background-image: url("./images/boom.png");
+}
+article.ride {
+  background-image: url("./images/ride.png");
+}
+article.snare {
+  background-image: url("./images/snare.png");
+}
+article.tom {
+  background-image: url("./images/tom.png");
+}
+article.tink {
+  background-image: url("./images/tink.png");
+}
+
+article.play {
+  visibility: visible;
+  filter: drop-shadow(1px 2px 5px rgba(255, 255, 255, 0.5));
+}
